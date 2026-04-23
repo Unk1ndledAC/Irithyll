@@ -1,0 +1,59 @@
+# Irithyll Unity Importer Tool Configuration
+# =========================================
+# This file contains all configuration for the Irithyll asset import pipeline
+
+[Paths]
+# Source directories containing raw assets
+MapModelSource = "D:\Unity Projects\map\model"
+MapTextureDDSSource = "D:\Unity Projects\map\texture\dds"
+MapTexturePNGSource = "D:\Unity Projects\map\texture\png"
+SFXModelSource = "D:\Unity Projects\sfx\resource\model"
+SFXTextureSource = "D:\Unity Projects\sfx\resource\texture"
+SFXEffectSource = "D:\Unity Projects\sfx\effect"
+ShaderSource = "D:\Unity Projects\shader"
+
+# NVIDIA Texture Tools executable
+NVTTExportPath = "D:\Program Files (x86)\NVIDIA Texture Tools\nvtt_export.exe"
+
+# Target Unity project directories
+UnityProjectRoot = "D:\Unity Projects\Irithyll"
+MapModelTarget = "Assets/Irithyll/Models/Map"
+MapTextureTarget = "Assets/Irithyll/Textures/Map"
+SFXModelTarget = "Assets/Irithyll/Models/SFX"
+SFXTextureTarget = "Assets/Irithyll/Textures/SFX"
+ParticleTarget = "Assets/Irithyll/Particles"
+MaterialTarget = "Assets/Irithyll/Materials"
+
+[ImportSettings]
+# Model import settings
+ModelScaleFactor = 100.0
+ModelUseFileUnits = true
+ModelGenerateColliders = true
+ModelOptimizeMesh = true
+
+# Texture import settings
+TextureMaxSize = 2048
+TextureCompression = "NormalQuality"
+TextureGenerateMipmaps = true
+TextureLinearTexture = false
+TextureReadWriteEnabled = false
+
+[ShaderMapping]
+# Maps Dark Souls shader prefixes to Unity shaders
+GXFlver_Col_Fwd = "Standard"
+GXFlver_Col_Dpt = "Standard"
+GXFlver_Col_GBuf = "Standard"
+DptA = "Standard (Transparent)"
+Bloody_Cloth = "Standard (Specular setup)"
+Skin = "Standard (Metallic setup)"
+
+[ParticleSettings]
+DefaultParticleCount = 50
+DefaultLifetime = 2.0
+DefaultStartSpeed = 1.0
+DefaultStartSize = 0.1
+
+[Logging]
+EnableLogging = true
+LogLevel = "Info"
+LogFile = "ImporterLog.txt"
