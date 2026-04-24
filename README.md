@@ -25,6 +25,7 @@ If you are cloning this repository for the first time, ensure Git LFS is install
 ```bash
 # Install Git LFS (if not already installed)
 git lfs install
+```
 
 The repository includes the following LFS tracking rules in `.gitattributes`:
 
@@ -34,6 +35,7 @@ git lfs track "*.mat"
 git lfs track "*.png"
 git lfs track "*.meta"
 git add .gitattributes
+```
 
 ### Git Configuration
 
@@ -48,6 +50,7 @@ git config lfs.https://github.com/Unk1ndledAC/Irithyll.git/info/lfs.locksverify 
 
 # Increase HTTP post buffer to 2GB
 git config http.postBuffer 2147483648
+```
 
 ### Pushing LFS Assets
 
@@ -56,3 +59,4 @@ To push all LFS-tracked assets to the remote repository:
 ```bash
 git lfs push --all origin main
 git push origin main
+```
